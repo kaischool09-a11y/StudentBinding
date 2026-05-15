@@ -25,7 +25,7 @@ namespace StudentBinding
            student2 = new Student
             {
                 Name = "mort",
-                ImageSource = "mort.jpg",
+                ImageSource = "mort.jpg", 
                 BirthDate = new DateTime(2001, 2, 2)
             };
 

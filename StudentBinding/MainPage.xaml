@@ -12,18 +12,15 @@
                 Aspect="AspectFit"
                 HeightRequest="185"
                 SemanticProperties.Description="Student profile image"
-                Source="dotnet_bot.png" />
-
+                Source="{Binding DisplayedStudent.ImageSource}" />
             <!--  שם התלמיד  -->
             <Label
                 FontAttributes="Bold"
                 FontSize="32"
                 HorizontalOptions="Center"
                 HorizontalTextAlignment="Center"
-                SemanticProperties.HeadingLevel="Level1"
-                Text="ישראל ישראלי"
+                Text="{Binding DisplayedStudent.Name, StringFormat='שם: {0}'}"
                 TextColor="MidnightBlue" />
-
             <!--  גיל  -->
             <Label
                 FontSize="24"
@@ -36,30 +33,17 @@
 
             <!--  תאריך לידה  -->
             <DatePicker
-                Date="01/01/2000"
+                Date="{Binding DisplayedStudent.BirthDate}"
                 FontSize="24"
                 HorizontalOptions="Center"
-                SemanticProperties.Description="Student birth date"
                 TextColor="MidnightBlue" />
 
-            <!--  כתובת מייל  -->
-            <Label
-                FontSize="24"
-                HorizontalOptions="Center"
-                HorizontalTextAlignment="Center"
-                SemanticProperties.Description="Student email address"
-                Text="joe@gmail.com"
-                TextColor="MidnightBlue" />
+            <Button 
+                Text="החלף סטודנט מוצג" 
+                Clicked="StudentSwitchClick" 
+                BackgroundColor="DarkBlue"
+                TextColor="White" />
 
-            <!--  טלפון  -->
-            <Label
-                FontSize="24"
-                HorizontalOptions="Center"
-                HorizontalTextAlignment="Center"
-                SemanticProperties.Description="Student phone number"
-                Text="050-1234567"
-                TextColor="MidnightBlue" />
-            <Button Text="עדכן תאריך לידה" />
         </VerticalStackLayout>
     </ScrollView>
 
